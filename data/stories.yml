@@ -1,0 +1,221 @@
+version: "2.0"
+
+stories:
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: goodbye
+  steps:
+  - intent: user_goodbye
+  - action: utter_goodbye
+  
+- story: tellingCategory_order_tellingLocation_tellingCuisine_pizza
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_order_delivery
+  - action: utter_ask_location
+  - intent: telling_location
+  - action: utter_ask_cuisine
+  - intent: telling_cuisine_pizza
+  - action: utter_affirm_cuisine
+  - action: utter_order_more
+  - intent: deny
+  - action: utter_submit
+  - action: utter_goodbye
+
+- story: telling_pizza_cuisine_more order
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_order_delivery
+  - action: utter_ask_location
+  - intent: telling_location
+  - action: utter_ask_cuisine
+  - intent:  telling_cuisine_pizza
+  - action: utter_affirm_cuisine
+  - action: utter_order_more
+  - intent: affirm
+  - action: utter_ask_cuisine
+
+- story: telling_pasta_cuisine 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_order_delivery
+  - action: utter_ask_location
+  - intent: telling_location
+  - action: utter_ask_cuisine
+  - intent:  telling_cuisine_pasta
+  - action: utter_affirm_cuisine
+  - action: utter_order_more
+  - intent: deny
+  - action: utter_submit
+  - action: utter_goodbye
+
+- story: telling_pasta_cuisine_more order
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_order_delivery
+  - action: utter_ask_location
+  - intent: telling_location
+  - action: utter_ask_cuisine
+  - intent:  telling_cuisine_pasta
+  - action: utter_affirm_cuisine
+  - action: utter_order_more
+  - intent: affirm
+  - action: utter_ask_cuisine
+
+- story: telling_antipasti _cuisine  
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_order_delivery
+  - action: utter_ask_location
+  - intent: telling_location
+  - action: utter_ask_cuisine
+  - intent:  telling_cuisine_antipasti 
+  - action: utter_affirm_cuisine
+  - action: utter_order_more
+  - intent: deny
+  - action: utter_submit
+  - action: utter_goodbye
+
+- story: telling_antipasti _cuisine_more order
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_order_delivery
+  - action: utter_ask_location
+  - intent: telling_location
+  - action: utter_ask_cuisine
+  - intent:  telling_cuisine_antipasti 
+  - action: utter_affirm_cuisine
+  - action: utter_order_more
+  - intent: affirm
+  - action: utter_ask_cuisine
+  
+- story: telling_weine_cuisine  
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_order_delivery
+  - action: utter_ask_location
+  - intent: telling_location
+  - action: utter_ask_cuisine
+  - intent:  telling_cuisine_weine
+  - action: utter_affirm_cuisine
+  - action: utter_order_more
+  - intent: deny
+  - action: utter_submit
+  - action: utter_goodbye
+
+- story: telling_weine_cuisine_more order
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_order_delivery
+  - action: utter_ask_location
+  - intent: telling_location
+  - action: utter_ask_cuisine
+  - intent:  telling_cuisine_weine
+  - action: utter_affirm_cuisine
+  - action: utter_order_more
+  - intent: affirm
+  - action: utter_ask_cuisine
+
+- story: tellingCategory_table_tellingLocation_table
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_table_booking
+  - action: utter_ask_location
+  - intent: telling_location
+  - action: utter_ask_num_people
+  - intent: telling_numpeople
+  - action: utter_ask_datetime
+  - intent: telling_datetime
+  - action: utter_ask_phone_no
+  - intent: telling_phoneno
+  - action: utter_slots_values
+
+- story: tellingCategory_order_tellingLocation_tellingCuisine_again
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_order_delivery
+  - action: utter_ask_location
+  - intent: telling_location
+  - action: utter_ask_cuisine
+  - intent:  deny
+  - action: utter_enter_cuisine_again
+
+- story: tellingCategory_order_tellingLocation_denied_tellingCuisine
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_order_delivery
+  - action: utter_ask_location
+  - intent: deny
+  - action: utter_enter_cuisine_again
+
+- story: tellingCategory_table_tellingLocation_denied_tellingCuisine
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_assist
+  - intent: telling_table_booking
+  - action: utter_ask_location
+  - intent: deny
+  - action: utter_location_denied
+  - action: utter_ask_location
+  - intent: telling_location
+  - action: utter_ask_num_people
+  - intent: telling_numpeople
+  - action: utter_ask_datetime
+  - intent: telling_datetime
+  - action: utter_ask_phone_no
+  - intent: telling_phoneno
+  - action: utter_slots_values

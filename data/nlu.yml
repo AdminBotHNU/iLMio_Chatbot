@@ -1,0 +1,426 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Grüß Gott!
+    - Guten Tag!
+    - Guten Tag Bot!
+    - Guten Tag lieber Bot!
+    - Hallo.
+    - Sag mal hallo!
+    - Hallo du da!
+    - Hallo du Bot!
+    - Hallo lieber Bot.
+    - Hallo Bot.
+    - Hey!
+    - Hey Robo!
+    - Hey Bot!
+    - Hey Bot, kannst du hallo sagen
+    - Hi!
+    - Hi, hi!
+    - Hi Bot, kannst du hallo sagen
+    - Hi hallo
+    - Mahlzeit!
+    - Moin!
+    - Moin, bot kannst du hallo sagen
+    - Moin, moin!
+    - Na du?!
+    - Na du Bot
+    - Na du, sag mal hallo
+    - Na du Bot, sag mal hallo
+    - Sag mal hallo.
+    - Kannst du hallo sagen
+    - Kannst mich begrüßen
+    - Kannst du uns begrüßen
+    - Sei gegrüßt
+    - Sei gegrüßt Bot
+    - Servus
+    - Servus Bot
+    - Hi Bot
+    - Hi Bot
+    - Huhu Bot
+    - Huhu du da
+    - Huhu hallo
+    - Huhu
+    - Huhu sag mal hallo
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Alles klar.
+    - Alles klar Bot
+    - auf jeden fall
+    - Dann erzähl mal.
+    - Dann erzähl mal Bot
+    - gern
+    - gern Bot
+    - Gerne.
+    - Gerne. Ja.
+    - Ich will mehr darüber wissen.
+    - ja
+    - ja Bot
+    - Ja.
+    - Ja bitte.
+    - Ja doch, erzähl mal.
+    - Ja erzähl mal.
+    - Ja erzähl mal noch ein bisschen.
+    - Ja erzähl mal noch ein bisschen mehr.
+    - Ja, erzähl mal was.
+    - Ja gerne.
+    - Ja ja doch.
+    - Ja ja, hab ich.
+    - Ja klar.
+    - Jo.
+    - johr
+    - Na gut.
+    - Na immer mehr.
+    - na klar
+    - Na klar.
+    - Natürlich.
+    - Noch mehr.
+    - Erzähle mir mehr
+    - Erzähle noch mehr
+    - nu klar
+    - ok
+    - okay
+    - Okay.
+    - Okay, dann kommen wir mal wieder.
+    - Sehr gern.
+    - Sehr gerne.
+    - Sehr gerne Bot
+    - Na klar Bot
+    - Natürlich Bot
+    - Nun klar Bot
+    - ok Bot
+    - okay Bot
+    - In der Tat
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - Nein
+    - nichts davon
+    - Nichts davon
+    - Nichts
+    - nein
+    - Das ist nicht richtig
+    - inkorrekt
+    - falsch
+    - Absolut falsch
+    - Absoluter Käse
+    - So stimmt das nicht!
+    - Das stimmt so überhaupt nicht!
+    - nicht wirklich
+    - Nein danke!
+    - Auf keinen Fall!
+    - Nie im Leben.
+    - Nee
+    - Stimmt nicht
+    - Keine
+    - keine
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - Mir geht es gut!
+    - Ganz ok. Kann mich nicht beklagen!
+    - Ganz gut.
+    - Mir geht es gut. Danke der Nachfrage.
+    - Mir geht es sehr gut. Danke der Nachfrage.
+    - Mir geht es ganz gut!
+    - Haja ganz ok soweit.
+    - gut
+    - Mir geht es auch gut.
+    - Ich fühle mich sehr gut.
+
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - Mir geht es gar nicht gut...
+    - Naja nicht so gut.
+    - Eher schlecht.
+    - Mir geht es nicht gut...
+    - nicht so gut
+    - schlecht
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent : user_ask_for_joke
+  examples: |
+    - erzähle einen Witz
+    - erzähle mir einen Witz
+    - erzähle einen Witz Chatbot
+    - erzähle einen Witz Bot
+    - erzähle mir bitte einen Witz
+    - erzähle mir bitte einen Witz Chatbot
+    - erzähle mir bitte einen Witz Bot
+    - kannst du mir einen Witz erzählen Bot
+    - kannst du mir einen Witz erzählen
+    - kannst du Witze erzählen
+    - Bot kannst du Witze erzählen
+    - kannst du bitte einen Witz erzählen
+    - Bist du gut im Witze erzählen
+    - Kennst du Witze
+    - Kennst du viele Witze
+    - Kanst du Scherze machen
+    - scherzt du manchmal
+    - erzähle mir etwas Lustiges
+    - erzähle mir bitte etwas Lustiges
+    - bist du witzig
+    - kannst du witzig sein
+    - kannst du einen Spaß machen
+    - kannst du Späße machen
+    - Verstehst du Spass
+    - Verstehst du Spaß
+    - Bist du ein Komiker
+    - Bist du ein komisch
+    - Kannst du komisch sein
+    - sag was Lustiges
+    - sag was Lustiges Bot
+    - kannst du was Lustiges sagen
+    - kannst du was Lustiges erzählen
+    - kannst du was Lustiges machen
+    - kennst du lustige Witze
+    - kennst du lustige Späße
+    - sei mal lustig
+    - das ist nicht lustig hier
+    - mache etwas Lustiges
+    - sei mal bitte witzig
+    - sei bitte witzig
+    - kennst du witziges
+    - sag doch mal was lustiges
+    - Witz
+    - Kannst du Witze erzählen Bot
+
+- intent : user_thanks
+  examples: |
+    - Danke
+    - Vielen dank
+    - Vielen lieben Dank
+    - Vielen herzlichen Dank
+    - Danke Bot
+    - Lieben dank
+    - Toll danke
+    - Ok danke
+    - Perfekt danke
+    - Danke für alles
+    - Danke für die hilfe
+    - Cool, danke
+    - Ja danke
+    - Ok vielen dank
+    - Großartig vielen dank
+
+- intent: user_reply_bad
+  examples: |
+    - Du Arschloch
+    - Warum bist du so dumm
+    - Dummer Vollidiot
+    - Du kannst echt nix!
+    - Nix kannst du!
+    - Dämmlicher Chatbot!
+    - Nichts nütziger Chatbot!
+    - Du dummer Chatbot
+
+- intent: user_goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Schönen Abend noch
+    - Auf Wiederschauen
+    - Auf Wiederschauen Bot
+    - auf wiedersehen
+    - Auf Wiedersehen Bot
+    - Auf Wiedersehen, chatbot.
+    - Bis bald
+    - Bis dann
+    - Bis demnächst
+    - Bis denn
+    - Bis die Tage
+    - Bis morgen
+    - Bis nachher
+    - Bis später
+    - Bis zum nächsten Mal
+    - Bis bald Bot
+    - Bis dann Bot
+    - Bis demnächst Bot
+    - Bis denn Bot
+    - Bis die Tage Bot
+    - Bis morgen Bot
+    - Bis nachher Bot
+    - Bis später Bot
+    - Bis zum nächsten Mal Bot
+    - Bis zum nächsten Mal. Tschau.
+    - bye
+    - Bot
+    - Ciao.
+    - Ich gehe jetzt
+    - Ich verabschiede mich jetzt
+    - Mach es gut
+    - Machs gut!
+    - Man sieht sich!
+    - Pass gut auf dich auf!
+    - Schönen Tag
+    - schönen tag noch
+    - Schönes Wochenende
+    - Schön Feierabend
+    - Tschau
+    - tschüs
+    - tschüs Bot
+    - Tschüss.
+    - Servus.
+    - Tschüss chat Bot.
+    - Wir sehen uns!
+    - Wir sehen uns das nächste mal
+
+- intent: telling_cuisine_pizza
+    - Ich würde gerne pizza bestellen.
+    - Ich hätte gerne pizza
+    - Ich nehme pizza
+    - Ich bestelle pizza
+    - Ich will pizza
+    - Ich möchte pizza
+    - pizza     
+    - Ich esse pizza
+
+- intent: telling_cuisine_pasta 
+    - Ich würde gerne pasta  bestellen.
+    - Ich hätte gerne pasta  
+    - Ich nehme pasta  
+    - Ich bestelle pasta  
+    - Ich will pasta  
+    - Ich möchte pasta  
+    - Ich esse pasta   
+    - pasta 
+     
+- intent: telling_cuisine_antipasti 
+    - Ich würde gerne Antipasti bestellen.
+    - Ich hätte gerne Antipasti
+    - Ich nehme Antipasti
+    - Ich bestelle Antipasti
+    - Ich will Antipasti
+    - Ich möchte Antipasti 
+    - Ich esse Antipasti
+    - Antipasti
+
+- intent: telling_cuisine_weine
+    - Ich trinke Weine
+    - Bitte Weine
+    - Weine
+    
+- intent: telling_datetime
+    - please book for tomorrow
+    - please book for tomorrow 8 pm
+    - tomorrow please
+    - tomorrow evening
+    - day after tomorrow please
+    - please book for 10 october 2019
+    - book for 1 january 2020
+    - i would like to book for next week
+    - please book for next week
+    - can you please book for today itself
+    - please book it for tomorrow
+    - book it for tomorrow please
+    - book it for tomorrow
+    - book for tomorrowtomorrow
+    - book it for today
+    - book it for today only
+    - book for friday 8 pm
+
+- intent: telling_location
+    - PLZ 12345
+    - 12345 
+    - 12345 plz
+    - plz 12345
+ 
+- intent: telling_numpeople
+    - 2
+    - Für 3
+    - Für 4 Personen
+    - Für 5 Leute
+    - Wir sind zu zweit
+    - Wir sind zu dritt 
+    - Wir sind zu viert  
+    - Ich bin alleine
+    - Für eine Person
+    - Nur für mich
+    - Nur ich
+
+- intent: telling_phoneno
+    - ya, bitte 87245378911
+    - es ist 10106537811
+    - yes 97112366221
+    - 87009815331
+    
+- intent: telling_order_delivery
+    - ich möchte bestellen fur LIeferung
+    
+- intent: telling_table_booking
+    - ich möchte einen Tisch reservieren
+
