@@ -1,0 +1,109 @@
+intents:
+- greet
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- user_ask_for_joke
+- user_thanks
+- user_reply_bad
+- user_goodbye
+- telling_location
+- telling_cuisine_pizza
+- telling_cuisine_antipasti
+- telling_cuisine_pasta
+- telling_cuisine_weine
+- telling_phoneno
+- telling_numpeople
+- telling_datetime
+- telling_table_booking
+- telling_order_delivery
+- goodbye
+responses:
+  utter_greet:
+  - text: "Hallo! WIllkommen bie iL Mio Ristorante Neu Ulm. Wie geht's? "
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_assist:
+  - buttons:
+    - payload: /telling_table_booking
+      title: Tisch reservieren
+    - payload: /telling_order_delivery
+      title: LIeferung
+    text: Möchtest du einen Tisch reservieren? oder Möchtest du bestellen fur LIeferung?
+  utter_happy:
+  - text: Wunderschon
+  utter_ask_location:
+  - text: Deine PLZ nummer bitte..
+  utter_ask_cuisine:
+  - buttons:
+    - payload: /telling_cuisine_pizza
+      title: Pizza
+    - payload: /telling_cuisine_pasta
+      title: Pasta
+    - payload: '/telling_cuisine_antipasti '
+      title: Antipasti
+    - payload: /telling_cuisine_weine
+      title: Weine
+    text: What cuisine you would like to binge :P.
+  utter_affirm_info:
+  - text: Danke fur die wichtige Information. Warte ein wenig bitte.
+  utter_enter_cuisine_again:
+  - buttons:
+    - payload: /telling_cuisine_pizza
+      title: Pizza
+    - payload: /telling_cuisine_pasta
+      title: Pasta
+    - payload: '/telling_cuisine_antipasti '
+      title: Antipasti
+    - payload: /telling_cuisine_weine
+      title: Weine
+    text: Sorry Try again
+  utter_location_denied:
+  - text: Es tut mir leid. I can't help you without location.
+  utter_affirm_cuisine:
+  - text: Ahh, Thanks for sharing the cuisine. You have got a good taste :D
+  - text: Thanks mate, Even I like {cuisine}.
+  utter_thanks:
+  - text: I hope you got what you were looking for,if not try me once more.
+  utter_goodbye:
+  - text: Bye. Schonen Tag noch
+  - text: Bye Bye. Bis bald.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_num_people:
+  - text: Für wieviele Personen möchtest du reservieren?
+  utter_ask_datetime:
+  - text: please share the date and time.
+  utter_ask_phone_no:
+  - text: Deine Handy nummer bitte..
+  utter_slots_values:
+  - text: I am going to book the  table using the information provided by you. You
+      will shortly receive order details on provided phone number.
+  utter_submit:
+  - text: Thanks for confirming your order is placed. You will shortly receive order
+      details on provided phone number.
+  utter_order_more:
+  - text: 'Möchtest du noch etwas deiner Bestellung hinzufügen? '
+actions:
+- utter_greet
+- utter_did_that_help
+- utter_goodbye
+- utter_affirm_info
+- utter_assist
+- utter_ask_location
+- utter_ask_cuisine
+- utter_enter_cuisine_again
+- utter_location_denied
+- utter_affirm_cuisine
+- utter_thanks
+- utter_ask_num_people
+- utter_ask_phone_no
+- utter_slots_values
+- utter_ask_time
+- utter_submit
+- utter_order_more
